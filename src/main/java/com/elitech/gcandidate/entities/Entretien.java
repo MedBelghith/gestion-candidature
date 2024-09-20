@@ -18,4 +18,11 @@ public class Entretien extends Audit{
 	private Recruteur recruteur;
 	@ManyToOne
 	private Candidat candidat;
+
+	public void planifierEntretien(LocalDate nouvelleDate) {
+        this.dateEntretien = nouvelleDate;
+    }
+	public void annulerEntretien() {
+        this.dateEntretien=null;
+    }
 }

@@ -2,5 +2,5 @@ package com.elitech.gcandidate.entities;
 
 public enum Statut {
 
-	en_attente, en_cours, rejetée, acceptée
+	 EN_ATTENTE, EN_COURS, REJETEE, ACCEPTEE
 }

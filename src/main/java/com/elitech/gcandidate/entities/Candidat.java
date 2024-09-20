@@ -24,4 +24,6 @@ public class Candidat extends Utilisateur{
 	private Statut statutCandidature;
 	@OneToMany(mappedBy = "candidat", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Candidature> candidatures = new ArrayList<>();
+	@OneToMany(mappedBy = "candidat", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<Entretien> entretiens = new ArrayList<>();
 }
