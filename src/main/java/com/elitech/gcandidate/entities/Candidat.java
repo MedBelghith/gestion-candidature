@@ -5,6 +5,7 @@ import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
@@ -20,7 +21,7 @@ public class Candidat extends Utilisateur{
 
 	private String cv;
 	private String lettreMotivation;
-	@Enumerated
+	@Enumerated(EnumType.STRING)
 	private Statut statutCandidature;
 	@OneToMany(mappedBy = "candidat", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Candidature> candidatures = new ArrayList<>();

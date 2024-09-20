@@ -40,7 +40,7 @@ public class CandidatServiceImp implements CandidatService{
 
 	@Override
 	public CandidatDto getOneCandidat(long id) {
-		Candidat candidat = candidatRepository.findById(id).orElseThrow(()->new RuntimeException("cnadidat not exist"));
+		Candidat candidat = candidatRepository.findById(id).orElseThrow(()->new RuntimeException("candidat "+ id +" does not exist"));
 		return CandidatMapper.convertToDTO(candidat);
 	}
 

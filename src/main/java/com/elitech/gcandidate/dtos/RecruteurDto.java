@@ -1,25 +1,24 @@
 package com.elitech.gcandidate.dtos;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.elitech.gcandidate.entities.Candidature;
+import com.elitech.gcandidate.entities.Candidat;
 import com.elitech.gcandidate.entities.Entretien;
-import com.elitech.gcandidate.entities.Statut;
+import com.elitech.gcandidate.entities.Recruteur;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CandidatDto extends UtilisateurDto{
-	
-	private String cv;
-	private String lettreMotivation;
-	private Statut statutCandidature;
-	private List<Candidature> candidatures = new ArrayList<>();
+
+public class RecruteurDto extends UtilisateurDto{
+
+	private String privileges;
+
 	private List<Entretien> entretiens = new ArrayList<>();
 }
