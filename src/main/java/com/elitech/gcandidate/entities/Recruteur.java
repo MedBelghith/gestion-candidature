@@ -20,4 +20,6 @@ public class Recruteur extends Utilisateur {
 	private String privileges;
 	@OneToMany(mappedBy = "recruteur", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Entretien> entretiens = new ArrayList<>();
+	@OneToMany(mappedBy = "recruteur")
+	private List<Offre> offres ;
 }
